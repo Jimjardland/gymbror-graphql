@@ -1,0 +1,32 @@
+type Setsx {
+  value: Int,
+  reps: Int
+}
+
+type Sessionx {
+  exerciseId: ID!
+  comment: String,
+  sets: [Setsx]
+}
+
+type Exercise {
+  id: ID
+  userId: ID
+  name: String
+  type: String
+  sessions: [Sessionx]
+}
+
+input ExerciseInput {
+  name: String!
+  type: String!
+  userId: ID!
+}
+
+type Query {
+  exercisesFromUser(userId: ID!): [Exercise]
+}
+
+type Mutation {
+  addExercise(input: ExerciseInput!) : Boolean
+}

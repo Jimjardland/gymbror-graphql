@@ -1,0 +1,45 @@
+input SessionInput {
+  exerciseId: ID!
+  comment: String,
+  sets: [SetsInput]
+}
+
+input SetsInput {
+  value: Int,
+  reps: Int
+}
+
+input WorkoutInput {
+  userId: ID!
+  date: String!
+  title: String
+  comment: String
+  sessions: [SessionInput]
+}
+
+type Session {
+  exerciseId: ID!
+  comment: String,
+  sets: [Sets]
+}
+
+type Sets {
+  value: Int,
+  reps: Int
+}
+
+type Workout {
+  userId: ID!
+  date: String!
+  title: String
+  comment: String
+  sessions: [Session]
+}
+
+type Query {
+  workoutsFromUser(userId: ID!) : [Workout]
+}
+
+type Mutation {
+  addWorkout(input: WorkoutInput!) : Boolean
+}
