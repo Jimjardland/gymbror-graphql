@@ -1,7 +1,7 @@
  {
   "database": {
-    "user": "api",
-    "password": "3x4mpl3",
+    "user": "user",
+    "password": "password",
     "database": "gymbror",
     "host": "localhost",
     "port": 5432,
