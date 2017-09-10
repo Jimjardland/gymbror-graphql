@@ -4,8 +4,8 @@ type Setsx {
 }
 
 type Sessionx {
-  exerciseId: ID!
-  comment: String,
+  exerciseId: ID
+  comment: String
   sets: [Setsx]
 }
 

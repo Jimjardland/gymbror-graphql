@@ -1,0 +1,17 @@
+input SessionInput {
+  workoutId: ID!
+  userId: ID!
+  exerciseId: ID!
+  comment: String
+  date: String!
+  sets: [SetsInput]
+}
+
+input SetsInput {
+  value: Int,
+  reps: Int
+}
+
+type Mutation {
+  addSession(input: SessionInput!) : Boolean
+}

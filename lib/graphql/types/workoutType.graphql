@@ -1,20 +1,13 @@
-input SessionInput {
-  exerciseId: ID!
-  comment: String,
-  sets: [SetsInput]
-}
-
-input SetsInput {
-  value: Int,
-  reps: Int
-}
-
 input WorkoutInput {
   userId: ID!
   date: String!
   title: String
   comment: String
-  sessions: [SessionInput]
+}
+
+type Sets {
+  value: Int,
+  reps: Int
 }
 
 type Session {
@@ -23,17 +16,12 @@ type Session {
   sets: [Sets]
 }
 
-type Sets {
-  value: Int,
-  reps: Int
-}
-
 type Workout {
   userId: ID!
   date: String!
   title: String
   comment: String
-  sessions: [Session]
+  sessions: [Sessionx]
 }
 
 type Query {

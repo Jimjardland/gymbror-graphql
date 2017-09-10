@@ -13,24 +13,3 @@ exports.up = (pgm) => {
 exports.down = (pgm) => {
   pgm.dropTable('workouts')
 }
-
-
-
-// workout: 
-
-// {
-//   date: new Date(),
-//   title: '',
-//   comment: '',
-//   sessions: [
-//     {
-//       exerciseId,
-//       sets: [{
-//         value: '',
-//         reps: 15
-//       }
-//       comment: '',
-//     ],
-//     }
-//   ]
-// }
