@@ -17,6 +17,7 @@ type Session {
 }
 
 type Workout {
+  id: ID
   userId: ID!
   date: String!
   title: String
